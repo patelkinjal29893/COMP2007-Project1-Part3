@@ -39,7 +39,7 @@ namespace COMP2007_Project1_Part3
             string sortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
 
             // connect to EF
-            using (DefaultConnection1 db = new DefaultConnection1())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 // query the Games Table using EF and LINQ
                 var Games = (from allGames in db.Games
@@ -69,7 +69,7 @@ namespace COMP2007_Project1_Part3
             int gameID = Convert.ToInt32(GamesGridView.DataKeys[selectedRow].Values["gameID"]);
 
             // use EF to find the selected game from DB and remove it
-            using (DefaultConnection1 db = new DefaultConnection1())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 Game deleteGame = (from gameRecords in db.Games
                                    where gameRecords.gameID == gameID

@@ -31,7 +31,7 @@ namespace COMP2007_Project1_Part3
             string sortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
 
             // connect to EF
-            using (DefaultConnection1 db = new DefaultConnection1())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 // query the Games Table using EF and LINQ
                 var Games = (from allGames in db.Games

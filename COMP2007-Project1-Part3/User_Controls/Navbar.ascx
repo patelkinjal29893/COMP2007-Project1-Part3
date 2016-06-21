@@ -15,11 +15,18 @@
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                <li id="game" runat="server"><a href="Games.aspx"><i class="fa fa-puzzle-piece fa-lg"></i> Games</a></li>
-                <li id="about" runat="server"><a href="EditGame.aspx"><i class="fa fa-bars fa-lg"></i> Edit Game</a></li>                
-                <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact Us</a></li>
-                <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-user fa-lg"></i> Login</a></li>
+                <li id="home" runat="server"><a href="/Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
+
+                <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
+                <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-user-plus fa-lg"></i> Register</a></li>
+
+                <li id="menu" runat="server"><a href="/GameTracker/MainMenu.aspx"><i class="fa fa-map-signs fa-lg"></i> Game Menu</a></li>
+                <li id="game" runat="server"><a href="/GameTracker/Games.aspx"><i class="fa fa-puzzle-piece fa-lg"></i> Games</a></li>
+                <li id="editgame" runat="server"><a href="/GameTracker/EditGame.aspx"><i class="fa fa-bars fa-lg"></i> Edit Game</a></li>  
+                <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li> 
+                             
+                <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact Us</a></li>
+                
             </ul>
         </div>
     

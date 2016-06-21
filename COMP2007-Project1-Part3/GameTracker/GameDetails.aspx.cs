@@ -26,7 +26,7 @@ namespace COMP2007_Project1_Part3
             int gameID = Convert.ToInt32(Request.QueryString["gameID"]);
 
             // connect to the EF DB
-            using (DefaultConnection1 db = new DefaultConnection1())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 // populate a game instance with the gameID from the URL parameter
                 Game updateGame = (from game in db.Games
@@ -47,13 +47,13 @@ namespace COMP2007_Project1_Part3
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // Redirect back to Games page
-            Response.Redirect("~/Games.aspx");
+            Response.Redirect("~/GameTracker/Games.aspx");
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use EF to connect to the server
-            using (DefaultConnection1 db = new DefaultConnection1())
+            using (GameTrackerConnection db = new GameTrackerConnection())
             {
                 // use the GameTracker model to create a new game object and
                 // save a new record
@@ -91,7 +91,7 @@ namespace COMP2007_Project1_Part3
                 db.SaveChanges();
 
                 // Redirect back to the updated games page
-                Response.Redirect("~/Games.aspx");
+                Response.Redirect("~/GameTracker/Games.aspx");
             }
         }
     }

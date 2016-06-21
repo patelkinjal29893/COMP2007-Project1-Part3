@@ -43,6 +43,15 @@ namespace COMP2007_Project1_Part3
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;
+                case "GameTracker Menu":
+                    menu.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    login.Attributes.Add("class", "active");
+                    break;
+                case "Register":
+                    register.Attributes.Add("class", "active");
+                    break;
             }
         }
     }

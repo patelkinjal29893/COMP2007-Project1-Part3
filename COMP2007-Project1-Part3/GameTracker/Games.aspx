@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Games List</h1>
-                <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
+                <a href="/GameTracker/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
 
                 <label for="PageSizeDropDownList">Records per page: </label>
                 <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true" 
@@ -28,7 +28,7 @@
                         <asp:BoundField DataField="description" HeaderText="Description" Visible="true" SortExpression="description"/>   
                         <asp:BoundField DataField="gameScore" HeaderText="Game Score" Visible="true" SortExpression="gameScore"/>                                             
                             
-                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/GameDetails.aspx.cs"
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/GameTracker/GameDetails.aspx.cs"
                             DataNavigateUrlFields="gameID" DataNavigateUrlFormatString="GameDetails.aspx?gameID={0}" 
                             ControlStyle-CssClass="btn btn-primary btn-sm" ControlStyle-ForeColor="White">
 <ControlStyle CssClass="btn btn-primary btn-sm" ForeColor="White"></ControlStyle>
