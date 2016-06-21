@@ -28,7 +28,7 @@ namespace COMP2007_Project1_Part3
             {
                 //check if the user is  logged in
                 if(HttpContext.Current.User.Identity.IsAuthenticated)
-                {
+                {                    
                     //show GameTracker PlaceHolder to only Login users
                     GameTrackerPlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
