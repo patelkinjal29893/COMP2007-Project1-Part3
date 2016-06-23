@@ -28,16 +28,22 @@ namespace COMP2007_Project1_Part3
             {
                 //check if the user is  logged in
                 if(HttpContext.Current.User.Identity.IsAuthenticated)
-                {                    
+                {                                        
                     //show GameTracker PlaceHolder to only Login users
                     GameTrackerPlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
+
+                    if(HttpContext.Current.User.Identity.GetUserName() == "admin")
+                    {
+                        UserPlaceHolder.Visible = true;
+                    }
                 }
                 else
                 {
                     //Don't show GameTracker Content to not Logged in Users and show only Login and Register
                     GameTrackerPlaceHolder.Visible = false;
                     PublicPlaceHolder.Visible = true;
+                    UserPlaceHolder.Visible = false;
                 }
                 SetActivePage();
             }
@@ -73,6 +79,9 @@ namespace COMP2007_Project1_Part3
                     break;
                 case "Register":
                     register.Attributes.Add("class", "active");
+                    break;
+                case "Users":
+                    users.Attributes.Add("class", "active");
                     break;
             }
         }

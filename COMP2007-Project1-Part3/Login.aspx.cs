@@ -17,6 +17,11 @@ namespace COMP2007_Project1_Part3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
             //create a userStore and userManager objects
             var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
@@ -25,14 +30,14 @@ namespace COMP2007_Project1_Part3
             var user = userManager.Find(UserNameTextBox.Text, PasswordTextBox.Text);
 
             //if the match is found for the user
-            if(user != null)
+            if (user != null)
             {
                 //authenticate and login new user
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
                 //Sign in User
-                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false}, userIdentity);
+                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                 //Redirect to main menu
                 Response.Redirect("~/GameTracker/MainMenu.aspx");
@@ -43,11 +48,6 @@ namespace COMP2007_Project1_Part3
                 StatusLabel.Text = "Invalid UserName or Password";
                 AlertFlash.Visible = true;
             }
-        }
-
-        protected void LoginButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
