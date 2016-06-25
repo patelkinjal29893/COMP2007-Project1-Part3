@@ -26,7 +26,7 @@
 
         <footer class="footer navbar navbar-fixed-bottom bg-info">
             <div class="container">
-                <p class="text-muted">&copy; 2016 Kinjal Patel </p>
+                <p class="text-muted">Copyright by Kinjal Patel &copy; 2016  </p>
             </div>
         </footer>
     </form>

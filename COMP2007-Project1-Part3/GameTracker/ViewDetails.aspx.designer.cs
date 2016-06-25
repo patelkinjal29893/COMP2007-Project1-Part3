@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Project1_Part3 {
+namespace COMP2007_Project1_Part3.GameTracker {
     
     
-    public partial class Games {
+    public partial class ViewDetails {
         
         /// <summary>
         /// PageSizeDropDownList control.
@@ -29,14 +29,5 @@ namespace COMP2007_Project1_Part3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GamesGridView;
-        
-        /// <summary>
-        /// LinkButtonViewDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonViewDetails;
     }
 }

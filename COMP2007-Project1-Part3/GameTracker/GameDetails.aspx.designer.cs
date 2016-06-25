@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Project1_Part3
-{
-
-
-    public partial class GameDetails
-    {
-
+namespace COMP2007_Project1_Part3 {
+    
+    
+    public partial class GameDetails {
+        
+        /// <summary>
+        /// WeekNumberTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WeekNumberTextBox;
+        
         /// <summary>
         /// GameNameTextBox control.
         /// </summary>
@@ -22,25 +29,7 @@ namespace COMP2007_Project1_Part3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox GameNameTextBox;
-
-        /// <summary>
-        /// GameDateTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GameDateTextBox;
-
-        /// <summary>
-        /// RangeValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
-
+        
         /// <summary>
         /// TeamNameTextBox control.
         /// </summary>
@@ -49,7 +38,25 @@ namespace COMP2007_Project1_Part3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TeamNameTextBox;
-
+        
+        /// <summary>
+        /// GameDateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GameDateTextBox;
+        
+        /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        
         /// <summary>
         /// DescriptionTextBox control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace COMP2007_Project1_Part3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
-
+        
         /// <summary>
         /// GameScoreTextBox control.
         /// </summary>
@@ -67,7 +74,25 @@ namespace COMP2007_Project1_Part3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox GameScoreTextBox;
-
+        
+        /// <summary>
+        /// GameSpectatorTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GameSpectatorTextBox;
+        
+        /// <summary>
+        /// WinningTeamTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WinningTeamTextBox;
+        
         /// <summary>
         /// CancelButton control.
         /// </summary>
@@ -76,7 +101,7 @@ namespace COMP2007_Project1_Part3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelButton;
-
+        
         /// <summary>
         /// SaveButton control.
         /// </summary>

@@ -5,33 +5,30 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Games List</h1>
-                <a href="/GameTracker/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
+                <a href="/GameTracker/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add Game</a>
 
                 <label for="PageSizeDropDownList">Records per page: </label>
-                <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true" 
+                <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true"
                     CssClass="btn btn-default btn-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
                     <asp:ListItem Text="3" Value="3" />
                     <asp:ListItem Text="5" Value="5" />
                     <asp:ListItem Text="All" Value="10000" />
                 </asp:DropDownList>
-
-                <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover" 
+               
+                <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
                     ID="GamesGridView" AutoGenerateColumns="False" DataKeyNames="gameID" OnRowDeleting="GamesGridView_RowDeleting"
                     AllowPaging="True" PageSize="3" OnPageIndexChanging="GamesGridView_PageIndexChanging"
-                    AllowSorting="True" OnSorting="GamesGridView_Sorting" OnRowDataBound="GamesGridView_RowDataBound">
+                    AllowSorting="True" OnSorting="GamesGridView_Sorting" OnRowDataBound="GamesGridView_RowDataBound" PagerStyle-CssClass="pagination-ys">
                     <Columns>
                         <asp:BoundField DataField="gameID" HeaderText="Game ID" Visible="true" SortExpression="gameID" />
-                        <asp:BoundField DataField="gameName" HeaderText="Game Name" Visible="true" SortExpression="gameName"/>  
-                        <asp:BoundField DataField="gameDate" HeaderText="Game Date" Visible="true" SortExpression="gameDate"
-                            DataFormatString="{0:MMM dd, yyyy}" />
-                        <asp:BoundField DataField="teamName" HeaderText="Team Name" Visible="true" SortExpression="teamName"/>                        
-                        <asp:BoundField DataField="description" HeaderText="Description" Visible="true" SortExpression="description"/>   
-                        <asp:BoundField DataField="gameScore" HeaderText="Game Score" Visible="true" SortExpression="gameScore"/>                                             
-                            
+                        <asp:BoundField DataField="weekNumer" HeaderText="Week Number" Visible="true" SortExpression="weekNumer" />
+                        <asp:BoundField DataField="gameName" HeaderText="Game Name" Visible="true" SortExpression="gameName" />
+                        <asp:BoundField DataField="teamName" HeaderText="Team Name" Visible="true" SortExpression="teamName" />
+
                         <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/GameTracker/GameDetails.aspx.cs"
-                            DataNavigateUrlFields="gameID" DataNavigateUrlFormatString="GameDetails.aspx?gameID={0}" 
+                            DataNavigateUrlFields="gameID" DataNavigateUrlFormatString="GameDetails.aspx?gameID={0}"
                             ControlStyle-CssClass="btn btn-primary btn-sm" ControlStyle-ForeColor="White">
-<ControlStyle CssClass="btn btn-primary btn-sm" ForeColor="White"></ControlStyle>
+                            <ControlStyle CssClass="btn btn-primary btn-sm" ForeColor="White"></ControlStyle>
                         </asp:HyperLinkField>
                         <asp:TemplateField HeaderText="Delete" ShowHeader="False">
                             <ItemTemplate>
@@ -41,6 +38,7 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
+                <asp:LinkButton ID="LinkButtonViewDetails" runat="server" CausesValidation="False" CommandName="View Details" Text="View Details" CssClass=" btn btn-success btn-lg" OnClick="LinkButtonViewDetails_Click"></asp:LinkButton>
             </div>
         </div>
     </div>

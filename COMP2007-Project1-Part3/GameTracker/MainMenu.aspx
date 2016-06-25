@@ -11,6 +11,10 @@
                         <a class="list-group-item" href="/GameTracker/Games.aspx"><i class="fa fa-th-list"></i> Game List</a>
                         <a class="list-group-item" href="/GameTracker/GameDetails.aspx"><i class="fa fa-plus-circle"></i> Add Game</a>
                     </div>
+                    <h3><i class="fa fa-leanpub fa-lg"></i> Details</h3>
+                    <div class="list-group">
+                        <a class="list-group-item" href="/GameTracker/ViewDetails.aspx"><i class="fa fa-th-list"></i> View Details List</a>                        
+                    </div>
                 </div>                
             </div>
         </div>

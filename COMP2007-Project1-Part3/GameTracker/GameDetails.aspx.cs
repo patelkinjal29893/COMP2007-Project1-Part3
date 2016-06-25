@@ -36,11 +36,14 @@ namespace COMP2007_Project1_Part3
                 // map the game properties to the form controls
                 if (updateGame != null)
                 {
+                    WeekNumberTextBox.Text = updateGame.weekNumer.ToString();
                     GameNameTextBox.Text = updateGame.gameName;
-                    GameDateTextBox.Text = updateGame.gameDate.ToString("yyyy-MM-dd");
                     TeamNameTextBox.Text = updateGame.teamName;
+                    GameDateTextBox.Text = updateGame.gameDate.ToString("yyyy-MM-dd");
                     DescriptionTextBox.Text = updateGame.description;
                     GameScoreTextBox.Text = updateGame.gameScore.ToString();
+                    GameSpectatorTextBox.Text = updateGame.Spectator.ToString();
+                    WinningTeamTextBox.Text = updateGame.winningTeam;
                 }
             }
         }
@@ -73,11 +76,14 @@ namespace COMP2007_Project1_Part3
                 }
 
                 // add form data to the new game record
+                newGame.weekNumer = Convert.ToInt32(WeekNumberTextBox.Text);
                 newGame.gameName = GameNameTextBox.Text;
-                newGame.gameDate = Convert.ToDateTime(GameDateTextBox.Text);
                 newGame.teamName = TeamNameTextBox.Text;
+                newGame.gameDate = Convert.ToDateTime(GameDateTextBox.Text);                
                 newGame.description = DescriptionTextBox.Text;
                 newGame.gameScore = Convert.ToInt32(GameScoreTextBox.Text);
+                newGame.Spectator = Convert.ToInt32(GameSpectatorTextBox.Text);
+                newGame.winningTeam = WinningTeamTextBox.Text;
 
                 // use LINQ to ADO.NET to add / insert new game into the database
 

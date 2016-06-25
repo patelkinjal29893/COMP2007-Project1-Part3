@@ -133,20 +133,21 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GameTracker\GameDetails.aspx" />
     <Content Include="GameTracker\Games.aspx" />
+    <Content Include="GameTracker\ViewDetails.aspx" />
     <Content Include="Images\bgImage.jpg" />
     <Content Include="Images\SBGamesLogo.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="GameTracker\MainMenu.aspx" />
-    <Content Include="Models\GameTrackerModel.Context.tt">
+    <Content Include="Models\GameTrackerConnection.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameTrackerModel.edmx</DependentUpon>
-      <LastGenOutput>GameTrackerModel.Context.cs</LastGenOutput>
+      <DependentUpon>GameTrackerConnection.edmx</DependentUpon>
+      <LastGenOutput>GameTrackerConnection.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\GameTrackerModel.tt">
+    <Content Include="Models\GameTrackerConnection.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameTrackerModel.edmx</DependentUpon>
-      <LastGenOutput>GameTrackerModel.cs</LastGenOutput>
+      <DependentUpon>GameTrackerConnection.edmx</DependentUpon>
+      <LastGenOutput>GameTrackerConnection.cs</LastGenOutput>
     </Content>
     <Content Include="Models\UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -174,6 +175,13 @@
     <Content Include="Models\UserModel.edmx.diagram">
       <DependentUpon>UserModel.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\GameTrackerConnection.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GameTrackerConnection.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\GameTrackerConnection.edmx.diagram">
+      <DependentUpon>GameTrackerConnection.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -181,13 +189,6 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Site.Master" />
-    <EntityDeploy Include="Models\GameTrackerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GameTrackerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\GameTrackerModel.edmx.diagram">
-      <DependentUpon>GameTrackerModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\jquery-2.2.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -250,6 +251,13 @@
     <Compile Include="GameTracker\GameDetails.aspx.designer.cs">
       <DependentUpon>GameDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GameTracker\ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameTracker\ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -283,9 +291,6 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Game.cs">
-      <DependentUpon>GameTrackerModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="GameTracker\Games.aspx.cs">
       <DependentUpon>Games.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -293,20 +298,23 @@
     <Compile Include="GameTracker\Games.aspx.designer.cs">
       <DependentUpon>Games.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\GameTrackerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GameTrackerModel.Context.tt</DependentUpon>
+    <Compile Include="Models\Game.cs">
+      <DependentUpon>GameTrackerConnection.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GameTrackerModel.cs">
+    <Compile Include="Models\GameTrackerConnection.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GameTrackerModel.tt</DependentUpon>
+      <DependentUpon>GameTrackerConnection.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GameTrackerModel.Designer.cs">
+    <Compile Include="Models\GameTrackerConnection.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GameTrackerModel.edmx</DependentUpon>
+      <DependentUpon>GameTrackerConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GameTrackerConnection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameTrackerConnection.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.Context.cs">
       <AutoGen>True</AutoGen>

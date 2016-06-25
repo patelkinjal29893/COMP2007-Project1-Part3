@@ -11,7 +11,7 @@ namespace COMP2007_Project1_Part3.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Game
     {
         public int gameID { get; set; }
@@ -20,5 +20,8 @@ namespace COMP2007_Project1_Part3.Models
         public string teamName { get; set; }
         public string description { get; set; }
         public int gameScore { get; set; }
+        public int weekNumer { get; set; }
+        public int Spectator { get; set; }
+        public string winningTeam { get; set; }
     }
 }

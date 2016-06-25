@@ -10,9 +10,9 @@ using COMP2007_Project1_Part3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
-namespace COMP2007_Project1_Part3
+namespace COMP2007_Project1_Part3.GameTracker
 {
-    public partial class Games : System.Web.UI.Page
+    public partial class ViewDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,14 +27,14 @@ namespace COMP2007_Project1_Part3
         }
 
         /**
-         * <summary>
-         * This method gets the games data from the DB
-         * </summary>
-         * 
-         * @method GetGames
-         * @returns {void}
-         */
-        private void GetGames()
+        * <summary>
+        * This method gets the games data from the DB
+        * </summary>
+        * 
+        * @method GetGames
+        * @returns {void}
+        */
+        protected void GetGames()
         {
             string sortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
 
@@ -60,29 +60,7 @@ namespace COMP2007_Project1_Part3
             this.GetGames();
         }
 
-        protected void GamesGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            // store which row was clicked
-            int selectedRow = e.RowIndex;
 
-            // get the selected gameID using the Grid's DataKey Collection
-            int gameID = Convert.ToInt32(GamesGridView.DataKeys[selectedRow].Values["gameID"]);
-
-            // use EF to find the selected game from DB and remove it
-            using (GameTrackerConnection db = new GameTrackerConnection())
-            {
-                Game deleteGame = (from gameRecords in db.Games
-                                   where gameRecords.gameID == gameID
-                                   select gameRecords).FirstOrDefault();
-
-                // perform the removal in the DB
-                db.Games.Remove(deleteGame);
-                db.SaveChanges();
-
-                // refresh the grid
-                this.GetGames();
-            }
-        }
         protected void GamesGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             // Set the new page number
@@ -130,12 +108,6 @@ namespace COMP2007_Project1_Part3
                     }
                 }
             }
-        }
-
-        protected void LinkButtonViewDetails_Click(object sender, EventArgs e)
-        {
-            //redirect to the Game Details Page
-            Response.Redirect("~/GameTracker/ViewDetails.aspx");
         }
     }
 }
