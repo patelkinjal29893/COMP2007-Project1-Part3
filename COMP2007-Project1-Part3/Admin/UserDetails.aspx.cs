@@ -22,7 +22,7 @@ namespace COMP2007_Project1_Part3.Admin
         {
             if(!IsPostBack)
             {
-                if(Request.QueryString.Count > 0)
+                if(Request.QueryString.Count > 0) //This is for allow admin user only
                 {
                     PasswordPlaceHolder.Visible = false;
                     this.GetUser();                
@@ -38,6 +38,7 @@ namespace COMP2007_Project1_Part3.Admin
         {
             string UserID = Request.QueryString["Id"].ToString();
 
+            // For Display user list to authorized user only
             using (UserConnection db = new UserConnection())
             {
                 AspNetUser updatedUser = (from user in db.AspNetUsers
@@ -106,10 +107,12 @@ namespace COMP2007_Project1_Part3.Admin
 
                 if(result.Succeeded)
                 {
+                    //redirect to the users page
                     Response.Redirect("~/Admin/Users.aspx");
                 }
                 else
                 {
+                    //Shows error message in ALertFlash
                     StatusLabel.Text = result.Errors.FirstOrDefault();
                     AlertFlash.Visible = true;
                 }

@@ -25,7 +25,6 @@ namespace COMP2007_Project1_Part3
                 this.GetGames();
             }
         }
-
         /**
          * <summary>
          * This method gets the games data from the DB
@@ -50,7 +49,6 @@ namespace COMP2007_Project1_Part3
                 GamesGridView.DataBind();
             }
         }
-
         protected void PageSizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             // set new page size
@@ -59,7 +57,6 @@ namespace COMP2007_Project1_Part3
             // refresh the grid
             this.GetGames();
         }
-
         protected void GamesGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             // store which row was clicked
@@ -91,7 +88,6 @@ namespace COMP2007_Project1_Part3
             // refresh the grid
             this.GetGames();
         }
-
         protected void GamesGridView_Sorting(object sender, GridViewSortEventArgs e)
         {
             // get the column to sort by
@@ -103,7 +99,6 @@ namespace COMP2007_Project1_Part3
             // toggle the direction
             Session["SortDirection"] = Session["SortDirection"].ToString() == "ASC" ? "DESC" : "ASC";
         }
-
         protected void GamesGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (IsPostBack)
@@ -131,7 +126,6 @@ namespace COMP2007_Project1_Part3
                 }
             }
         }
-
         protected void LinkButtonViewDetails_Click(object sender, EventArgs e)
         {
             //redirect to the Game Details Page

@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="Register Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="COMP2007_Project1_Part3.Register" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-offset-4 col-md-4">
-                 <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
+                <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
                     <asp:Label runat="server" ID="StatusLabel" />
                 </div>
                 <h1>Register Page</h1>
@@ -12,7 +12,7 @@
                 <br />
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h1 class="panel-title"><i class="fa fa-user-plus fa-lg"></i> Register</h1>
+                        <h1 class="panel-title"><i class="fa fa-user-plus fa-lg"></i>Register</h1>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label class="control-label" for="ConfirmPasswordTextBox">Confirm:</label>
                             <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="ConfirmPasswordTextBox" placeholder="Confirm Password" required="true" TabIndex="0"></asp:TextBox>
-                            <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal"  ControlToValidate="ConfirmPasswordTextBox" runat="server"
+                            <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal" ControlToValidate="ConfirmPasswordTextBox" runat="server"
                                 ControlToCompare="PasswordTextBox" CssClass="label label-danger" />
                         </div>
                         <div class="text-right">
@@ -42,7 +42,7 @@
                             <asp:Button Text="Register" ID="RegisterButton" runat="server" CssClass="btn btn-primary" OnClick="RegisterButton_Click" TabIndex="0" />
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </div>

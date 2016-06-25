@@ -20,15 +20,22 @@ namespace COMP2007_Project1_Part3.Admin
                 this.GetUsers();
             }
         }
+
+        /*
+         * This method for get users
+         * 
+         * return Void
+         * */
         protected void GetUsers()
         {
+            //for display users list
             using (UserConnection db = new UserConnection())
             {
                 var Users = (from users in db.AspNetUsers
                              select users);
 
                 UsersGridView.DataSource = Users.ToList();
-                UsersGridView.DataBind();
+                UsersGridView.DataBind(); //for bind the user data
             }
         }
 

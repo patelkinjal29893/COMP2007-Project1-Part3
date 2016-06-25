@@ -135,7 +135,6 @@
     <Content Include="GameTracker\Games.aspx" />
     <Content Include="GameTracker\ViewDetails.aspx" />
     <Content Include="Images\bgImage.jpg" />
-    <Content Include="Images\SBGamesLogo.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="GameTracker\MainMenu.aspx" />

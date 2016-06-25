@@ -12,7 +12,7 @@ using Microsoft.Owin.Security;
 
 /**
  * @author: Kinjal patel
- * @date: June 20, 2016
+ * @date: June 24, 2016
  * @version: 0.0.1 - added SetActivePage method
  */
 

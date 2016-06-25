@@ -20,6 +20,14 @@ namespace COMP2007_Project1_Part3
                 this.GetGames();
             }
         }
+        /**
+        * <summary>
+        * This method gets the games data from the DB
+        * </summary>
+        * 
+        * @method GetGames
+        * @returns {void}
+        */
         private void GetGames()
         {
             // populate the form with existing game data from the db
@@ -52,7 +60,6 @@ namespace COMP2007_Project1_Part3
             // Redirect back to Games page
             Response.Redirect("~/GameTracker/Games.aspx");
         }
-
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use EF to connect to the server
@@ -61,9 +68,7 @@ namespace COMP2007_Project1_Part3
                 // use the GameTracker model to create a new game object and
                 // save a new record
                 Game newGame = new Game();
-
                 int gameID = 0;
-
                 if (Request.QueryString.Count > 0)
                 {
                     // get the id from url
@@ -83,9 +88,7 @@ namespace COMP2007_Project1_Part3
                 newGame.description = DescriptionTextBox.Text;
                 newGame.gameScore = Convert.ToInt32(GameScoreTextBox.Text);
                 newGame.Spectator = Convert.ToInt32(GameSpectatorTextBox.Text);
-                newGame.winningTeam = WinningTeamTextBox.Text;
-
-                // use LINQ to ADO.NET to add / insert new game into the database
+                newGame.winningTeam = WinningTeamTextBox.Text;               
 
                 // check to see if a new game is being added
                 if (gameID == 0)

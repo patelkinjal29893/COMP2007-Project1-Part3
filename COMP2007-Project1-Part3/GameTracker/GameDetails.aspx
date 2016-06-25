@@ -14,10 +14,10 @@
                 <div class="form-group">
                     <label class="control-label" for="GameNameTextBox">Game Name</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="GameNameTextBox" placeholder="Game Name" required="true"></asp:TextBox>
-                </div>                
+                </div>
                 <div class="form-group">
                     <label class="control-label" for="TeamNameTextBox">Team Name</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="TeamNameTextBox" placeholder="Team Name" required="true"></asp:TextBox>                    
+                    <asp:TextBox runat="server" CssClass="form-control" ID="TeamNameTextBox" placeholder="Team Name" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="GameDateTextBox">Game Date</label>
@@ -28,22 +28,22 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="DescriptionTextBox">Description</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="DescriptionTextBox" placeholder="Description" required="true"></asp:TextBox>                    
+                    <asp:TextBox runat="server" CssClass="form-control" ID="DescriptionTextBox" placeholder="Description" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="GameScoreTextBox">Game Score</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="GameScoreTextBox" placeholder="Game Score" required="true"></asp:TextBox>                    
+                    <asp:TextBox runat="server" CssClass="form-control" ID="GameScoreTextBox" placeholder="Game Score" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="GameSpectatorTextBox">Game Spectator</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="GameSpectatorTextBox" placeholder="Game Spectator" required="true"></asp:TextBox>                    
+                    <asp:TextBox runat="server" CssClass="form-control" ID="GameSpectatorTextBox" placeholder="Game Spectator" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="WinningTeamTextBox">Winning Team</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="WinningTeamTextBox" placeholder="Winning Team" required="true"></asp:TextBox>                    
+                    <asp:TextBox runat="server" CssClass="form-control" ID="WinningTeamTextBox" placeholder="Winning Team" required="true"></asp:TextBox>
                 </div>
                 <div class="text-right">
-                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server" 
+                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server"
                         UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton_Click" />
                     <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click" />
                 </div>

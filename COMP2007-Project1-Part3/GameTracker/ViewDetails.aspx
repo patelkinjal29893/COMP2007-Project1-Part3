@@ -5,9 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-10">
                 <h1>Games Details List</h1>
-
-                <label for="PageSizeDropDownList">Records per page: </label>
-                
+                <label for="PageSizeDropDownList">Records per page: </label>                
                 <asp:DropDownList ID="PageSizeDropDownList" runat="server" AutoPostBack="true"
                     CssClass="btn btn-default btn-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
                     <asp:ListItem Text="3" Value="3" />

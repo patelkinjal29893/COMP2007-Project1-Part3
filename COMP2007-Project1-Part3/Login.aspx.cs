@@ -10,7 +10,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
-
 namespace COMP2007_Project1_Part3
 {
     public partial class Login : System.Web.UI.Page
@@ -20,6 +19,7 @@ namespace COMP2007_Project1_Part3
            
         }
 
+        //This is Login Button click event for allow user to login
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             //create a userStore and userManager objects

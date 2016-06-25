@@ -10,7 +10,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
-
 namespace COMP2007_Project1_Part3
 {
     public partial class Register : System.Web.UI.Page
@@ -26,6 +25,7 @@ namespace COMP2007_Project1_Part3
             Response.Redirect("~/Default.aspx");
         }
 
+        //This is Register Button Click Eventfor Register new User
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             //create a userStore and userManager objects
