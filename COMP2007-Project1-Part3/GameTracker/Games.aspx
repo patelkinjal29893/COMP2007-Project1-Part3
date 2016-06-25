@@ -11,7 +11,7 @@
                     CssClass="btn btn-default btn-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
                     <asp:ListItem Text="3" Value="3" />
                     <asp:ListItem Text="5" Value="5" />
-                    <asp:ListItem Text="All" Value="10000" />
+                    <asp:ListItem Text="All" Value="10" />
                 </asp:DropDownList>               
                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
                     ID="GamesGridView" AutoGenerateColumns="False" DataKeyNames="gameID" OnRowDeleting="GamesGridView_RowDeleting"
